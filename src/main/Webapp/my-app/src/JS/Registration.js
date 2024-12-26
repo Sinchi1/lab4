@@ -25,7 +25,16 @@ function Registration() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <header style={{
+                    backgroundColor: '#282c34',
+                    padding: '10px 20px',
+                    color: 'white',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                }}>
+                </header>
+                <img src={logo} className="App-logo" alt="logo"/>
                 <button className="App-button" onClick={openModal}>Login</button>
             </header>
 
