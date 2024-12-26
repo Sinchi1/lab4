@@ -34,5 +34,31 @@ build/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
-.DS_Store
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/src/main/Webapp/node_modules
+/src/main/Webapp/.pnp
+/src/main/Webapp/.pnp.js
+
+# testing
+/src/main/Webapp/coverage
+
+# production
+/src/main/Webapp/build
+
+# misc
+/src/main/Webapp/.DS_Store
+/src/main/Webapp/.env.local
+/src/main/Webapp/.env.development.local
+/src/main/Webapp/.env.test.local
+/src/main/Webapp/.env.production.local
+
+/src/main/Webapp/npm-debug.log*
+/src/main/Webapp/yarn-debug.log*
+/src/main/Webapp/yarn-error.log*
+
+
+
+# custom
+.idea

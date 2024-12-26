@@ -1,0 +1,19 @@
+.clock-center{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    top: 95px;
+    left: 95px;
+}
+
+.texter {
+    color: white;
+}
+
+.for-refs{
+    color: white;
+    text-decoration: none;
+    margin-right: 15px
+}
