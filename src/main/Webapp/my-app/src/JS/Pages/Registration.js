@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../Images/logo.svg';
-import '../Styles/App.css';
+import logo from '../../Images/logo.svg';
+import '../../Styles/App.css';
 
 function Registration() {
     const [isModalOpen, setIsModalOpen] = useState(false);

@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './Styles/index.css';
-import Registration from "./JS/Registration";
+import Registration from "./JS/Pages/Registration";
 import PrivateRoute from "./JS/Navigation/PrivateRoute";
-import Time from "./JS/Clocks";
+import Time from "./JS/Pages/Clocks";
+import { store } from './JS/store/index';
+import Graph from "./JS/Pages/Graph";
+import {Provider} from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -24,7 +27,7 @@ root.render(
             <Route path = "/graph" element={
                 <PrivateRoute>
 
-                    <Registration/>
+                    <Graph/>
 
                 </PrivateRoute>}/>
         </Routes>

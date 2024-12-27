@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Styles/clock.css';
+import '../../Styles/clock.css';
 
 function Clock() {
     const [time, setTime] = useState(new Date());
@@ -42,7 +42,7 @@ function Clock() {
             }}>
                 <h1 style={{ margin: 0, fontSize: '1.5rem' }}>Времечко?</h1>
                 <nav>
-                    <a href="/graph" className="for-refs">Перестрелка 😾</a>
+                    <a href="/Graph" className="for-refs">Перестрелка 😾</a>
                     <a href="/registration" className="for-refs">Выйти</a>
                 </nav>
             </header>
