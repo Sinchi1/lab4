@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import '../Styles/clock.css';
+import '../../Styles/clock.css';
+import '../../Styles/App.css';
+import {logout} from "../store/authSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import {Navigate} from "react-router-dom";
+
 
 function Clock() {
-    const [time, setTime] = useState(new Date());
 
     useEffect(() => {
         const timerId = setInterval(() => {
@@ -11,6 +15,18 @@ function Clock() {
 
         return () => clearInterval(timerId); // Cleanup the interval on component unmount
     }, []);
+
+    const [time, setTime] = useState(new Date());
+    const dispatch = useDispatch();
+    const token = useSelector((state) => state.auth.token);
+
+    const handleLogout = () => {
+        dispatch(logout());
+    };
+
+    if (!token) {
+        return <Navigate to="/" replace />;
+    }
 
     const calculateAngle = (unit, max) => (unit / max) * 360;
 
@@ -40,11 +56,16 @@ function Clock() {
                 alignItems: 'center',
                 flexShrink: 0, // Prevent shrinking of the header
             }}>
-                <h1 style={{ margin: 0, fontSize: '1.5rem' }}>Времечко?</h1>
+                <h1 style={{margin: 0, fontSize: '1.5rem'}}>Времечко?</h1>
                 <nav>
-                    <a href="/graph" className="for-refs">Перестрелка 😾</a>
-                    <a href="/registration" className="for-refs">Выйти</a>
+                    <a href="#/graph" className="nav-link">Перестрелка 😾</a>
                 </nav>
+                <button
+                    onClick={handleLogout}
+                    className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700"
+                >
+                    Выйти
+                </button>
             </header>
 
             <div style={{
@@ -55,7 +76,7 @@ function Clock() {
                 alignItems: 'center',
                 flexDirection: 'column',
             }}>
-                <div style={{
+            <div style={{
                     width: '200px',
                     height: '200px',
                     borderRadius: '50%',

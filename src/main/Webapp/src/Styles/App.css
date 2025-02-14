@@ -1,0 +1,291 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Existing styles remain unchanged */
+
+/* New styles */
+.header {
+  background-color: #282c34;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-link {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4299e1;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #e53e3e;
+  color: white;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c53030;
+}
+
+.main-content {
+  max-width: 1280px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.grid-container {
+  width: 100%;
+}
+
+.grid-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: #282c34;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  color: black;
+}
+
+.Modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal-container {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.App-button, .Modal-button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.App-button:hover, .Modal-button:hover {
+  background-color: #0056b3;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.table-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.clear-button {
+  background-color: #e53e3e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #c53030;
+}
+
+.clear-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.custom-table th, .custom-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.hit-yes {
+  color: green;
+}
+
+.hit-no {
+  color: red;
+}
+
+.no-data {
+  text-align: center;
+  color: #777;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+.form-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-error {
+  color: red;
+  font-size: 14px;
+}
+
+.form-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.form-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
