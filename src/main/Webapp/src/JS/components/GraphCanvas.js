@@ -9,16 +9,6 @@ const GraphCanvas = ({ onPointClick }) => {
     const CENTER = CANVAS_SIZE/2;
     const DOT_SIZE = 4;
 
-    // const getRelativeCoordinates = (point) => {
-    //     const scale = CENTER / currentR;
-    //     // Восстанавливаем логические координаты
-    //     const logicalX = point.x / point.r;
-    //     const logicalY = point.y / point.r;
-    //     // Преобразуем их в координаты канвы
-    //     const x = CENTER + (logicalX * scale);
-    //     const y = CENTER - (logicalY * scale);
-    //     return { x, y };
-    // };
 
     const getRelativeCoordinates = (point) => {
         const scale = CENTER / currentR;
@@ -172,7 +162,13 @@ const GraphCanvas = ({ onPointClick }) => {
             width={CANVAS_SIZE}
             height={CANVAS_SIZE}
             onClick={handleClick}
-            className="bg-white rounded shadow-md cursor-crosshair"
+            style={{
+                backgroundColor: "#fff",
+                borderRadius: "4px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                cursor: "crosshair"
+            }}
+
         />
     );
 };

@@ -1,0 +1,68 @@
+.auth-form {
+    width: 100%;
+    max-width: 384px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 4px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #38a169;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #2f855a;
+}
+
+.submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(56, 161, 105, 0.5);
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,74 @@
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.login-button {
+    background-color: #3182ce;
+    color: #fff;
+}
+
+.login-button:hover:not(:disabled) {
+    background-color: #2b6cb0;
+}
+
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.register-button {
+    background-color: #38a169;
+    color: #fff;
+}
+
+.register-button:hover:not(:disabled) {
+    background-color: #2f855a;
+}
+
+.register-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
